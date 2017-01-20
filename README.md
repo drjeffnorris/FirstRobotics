@@ -20,5 +20,6 @@ sc query IpOverUsbSvc
 
 # Building and testing this application
 
-Once you've performed the setup steps above you should be able to build this project from Unity following the same process described in the HoloLens developer documentation.  
+Once you've performed the setup steps above you should be able to build this project from Unity following the same process described in the HoloLens developer documentation.  Be sure to launch the application in debug mode from Visual Studio so that you can see the console messages.  Then run TestConsoleApp.exe from the Test folder in this project.  It will connect to the HoloLens app and transmit a series of characters.  You should see output from both programs indicating that the connection and transmission was successful.
+
 
