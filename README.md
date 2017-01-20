@@ -12,6 +12,9 @@ sc stop IpOverUsbSvc
 sc start IpOverUsbSvc
 ~~~
 
+# Building this application
+__IMPORTANT NOTE: __
+
 # Other notes
 
 You wouldn’t think that a simple TCP/IP server would be a challenging thing to put together, but HoloLens apps are restricted to APIs that are both:
