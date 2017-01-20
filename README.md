@@ -10,16 +10,21 @@ Communication from the driver station to the HoloLens via a USB cable depends on
 2. Double-click on the ipoverusb-first.reg file in the Setup folder of this project.  This will add a registry key to the computer that configures an IPOverUSB mapping from port 1000 on the local computer to port 1000 on the HoloLens.
 3. Either reboot the computer, or open an elevated command prompt by pressing Win-X and selecting "Command Prompt (Admin)" and run the following commands:
 ~~~
-sc stop IpOverUsbSvc
+sc stop IpOverUsbSvcT
 sc start IpOverUsbSvc
 ~~~
-4. You can confirm that IpOverUsbSvc is functioning by running the following commands in an elevated command prompt:
+You can confirm that IpOverUsbSvc is functioning by running the following commands in an elevated command prompt:
 ~~~
 sc query IpOverUsbSvc
 ~~~
 
 # Building and testing this application
 
-Once you've performed the setup steps above you should be able to build this project from Unity following the same process described in the HoloLens developer documentation.  Be sure to launch the application in debug mode from Visual Studio so that you can see the console messages.  Then run TestConsoleApp.exe from the root folder of this project.  It will connect to the HoloLens app and transmit a series of characters.  You should see output from both programs indicating that the connection and transmission was successful.
+Once you've performed the setup steps above you should be able to build this project from Unity following the same process described in the HoloLens developer documentation.  You want to build the "SocketTest" scene from the "Socket" folder.
 
+Be sure to launch the application on the HoloLens in debug mode from Visual Studio so that you can see the console messages.  Then run TestConsoleApp.exe from the root folder of this project.  It will connect to the HoloLens app and transmit a series of characters.  You should see output from both programs indicating that the connection and transmission was successful.
+
+# Extending this application
+
+After you've built and successfully tested this application, you can start making extensions by modifying the bytesReceived method in SocketBehavior.
 
