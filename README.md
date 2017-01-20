@@ -6,8 +6,8 @@ This project only works with a special build of the HoloLens operating system, s
 # Setup
 Communication from the driver station to the HoloLens via a USB cable depends on a service called IPoverUSB.  We configure this service to reroute connections made to port 1000 on the driver station to port 1000 on the HoloLens.  To set this up, you'll need to follow these steps on every computer that you want to be able to communicate with the HoloLens over USB:
 
-1. Install Visual Studio 2015 Update 3 or later from this page: https://developer.microsoft.com/en-us/windows/holographic/install_the_tools.  This will install the IpOverUSB service.
-2. Double-click on the Setup\ipoverusb-first.reg file in this project.  This will add a registry key that adds an IPOverUSB mapping from port 1000 on the local computer to port 1000 on the HoloLens.
+1. Install Visual Studio 2015 Update 3 or later from this page: https://developer.microsoft.com/en-us/windows/holographic/install_the_tools.  This will install the IpOverUSB service.  This is the same software you have to download for all HoloLens development.
+2. Double-click on the ipoverusb-first.reg file in the Setup folder of this project.  This will add a registry key to the computer that configures an IPOverUSB mapping from port 1000 on the local computer to port 1000 on the HoloLens.
 3. Either reboot the computer, or open an elevated command prompt by pressing Win-X and selecting "Command Prompt (Admin)" and run the following commands:
 ~~~
 sc stop IpOverUsbSvc
