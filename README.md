@@ -22,9 +22,3 @@ sc query IpOverUsbSvc
 
 Once you've performed the setup steps above you should be able to build this project from Unity following the same process described in the HoloLens developer documentation.  
 
-# More background
-
-1.	Supported for Universal Windows Platform apps
-2.	Available in the extremely out of date version of Mono that Unity uses
-
-Plus, we don’t want to use any of Unity’s networking stuff because that is going to be hard to integrate with from other non-Unity applications (like the Driver Station).
