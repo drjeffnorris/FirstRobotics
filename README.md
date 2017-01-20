@@ -1,5 +1,7 @@
 # First Robotics HoloLens Project
-This is a starter Unity project for the NASA FIRST Robotics teams that are piloting the use of the HoloLens in the competition.  It is a simple TCP/IP server that runs on the HoloLens and accepts connections from applications on the driver's station.  Teams can modify and extend this project to do interesting things with the data that's received.  __Note that this project only works with a special build of the HoloLens operating system, so if you've stumbled across this project and you aren't on one of the aforementioned NASA teams, sorry - this won't work for you.__
+This is a starter Unity project for the NASA FIRST Robotics teams that are piloting the use of the HoloLens in the competition.  It is a simple TCP/IP server that runs on the HoloLens and accepts connections from applications on the driver's station over a USB cable.  Teams should modify and extend this project to do interesting things with the data that's received.
+
+This project only works with a special build of the HoloLens operating system, so if you've stumbled across this project and you aren't on one of the aforementioned NASA teams, sorry - this code won't work for you.  In addition, a special policy exception has been installed to the HoloLens devices that have been shipped to the NASA teams that is specific to _only this application_.  This is why teams need to download and modify this application instead of starting from scratch - a different application will not be covered by the same exception.
 
 # Setup
 Communication from the driver station to the HoloLens via a USB cable depends on a service called IPoverUSB.  We configure this service to reroute connections made to port 1000 on the driver station to port 1000 on the HoloLens.  To set this up, you'll need to follow these steps on every computer that you want to be able to communicate with the HoloLens over USB:
@@ -11,13 +13,16 @@ Communication from the driver station to the HoloLens via a USB cable depends on
 sc stop IpOverUsbSvc
 sc start IpOverUsbSvc
 ~~~
+4. You can confirm that IpOverUsbSvc is functioning by running the following commands in an elevated command prompt:
+~~~
+sc query IpOverUsbSvc
+~~~
 
-# Building this application
-__IMPORTANT NOTE: __
+# Building and testing this application
 
-# Other notes
+Once you've performed the setup steps above you should be able to build this project from Unity following the same process described in the HoloLens developer documentation.  
 
-You wouldn’t think that a simple TCP/IP server would be a challenging thing to put together, but HoloLens apps are restricted to APIs that are both:
+# More background
 
 1.	Supported for Universal Windows Platform apps
 2.	Available in the extremely out of date version of Mono that Unity uses
