@@ -1,8 +1,0 @@
-telnet 127.0.0.1 1023
-
-
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Oobe" /v "Completed" /t REG_DWORD /d 1 /f
-kill oobeapp
-cd \
-NIExempt firstrobotics_vfntf6rnh741p
-
